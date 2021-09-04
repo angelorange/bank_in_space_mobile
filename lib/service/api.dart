@@ -4,11 +4,12 @@ import '../model/login_model.dart';
 
 class APIService {
   Future<LoginResponseModel> login(LoginRequestModel requestModel) async {
-    String url = "bck-api-test.herokuapp.com/users/sign_in";
+    String url = "https://reqres.in/api/login";
 
     final response =
         await http.post(Uri.parse(url), body: requestModel.toJson());
     if (response.statusCode == 200 || response.statusCode == 400) {
+      print(response);
       return LoginResponseModel.fromJson(
         json.decode(response.body),
       );
