@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:bank_in_space/service/api.dart';
 import 'package:bank_in_space/model/login_model.dart';
 
-import '../ProgressHUD.dart';
-
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
