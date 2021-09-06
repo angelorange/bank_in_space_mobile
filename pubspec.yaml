@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_login: ^2.2.1
   http: ^0.13.3
+  google_fonts: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -40,6 +41,14 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  fonts:
+    - family: BebasNeue
+      fonts:
+      - asset: assets/fonts/BebasNeue-Regular.ttf
+    - family: Righteous
+      fonts: 
+        - asset: assets/fonts/Righteous-Regular.ttf
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -48,7 +57,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/summer.jpg
     - assets/logo.png
     - jex.jpg
   # An image asset can refer to one or more resolution-specific "variants", see

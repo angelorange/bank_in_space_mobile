@@ -12,19 +12,44 @@ class HomePage extends StatelessWidget {
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/jex.jpg"), fit: BoxFit.cover)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: ListView(
+          scrollDirection: Axis.vertical,
           children: <Widget>[
-            Image.asset("assets/logo.png", fit: BoxFit.cover),
-            Text(
-              "DevinSpace Bank",
-              style: TextStyle(fontSize: 50, color: Colors.white),
+            Image.asset("assets/logo.png",
+                fit: BoxFit.cover, height: 400, width: 400),
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Container(
+                padding: const EdgeInsets.all(3.0),
+                width: 60,
+                height: 80,
+                child: Text(
+                  'Bem Vindo ao DevInSpace Bank!',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Righteous',
+                      fontSize: 30),
+                ),
+              ),
             ),
-            ButtonTextIcon(
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Container(
+                padding: const EdgeInsets.all(3.0),
+                width: 60,
+                height: 80,
+                child: Text(
+                  'O seu Bank perto de você.',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Righteous',
+                      fontSize: 30),
+                ),
+              ),
+            ),
+            ButtonText(
               color: Colors.purple,
               text: "Login",
-              iconData: Icons.add,
             ),
             SizedBox(
               height: 30,
