@@ -31,6 +31,7 @@ dependencies:
   flutter_login: ^2.2.1
   http: ^0.13.3
   flutter_progress_hud: ^2.0.0
+  google_fonts: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -41,6 +42,14 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  fonts:
+    - family: BebasNeue
+      fonts:
+      - asset: assets/fonts/BebasNeue-Regular.ttf
+    - family: Righteous
+      fonts: 
+        - asset: assets/fonts/Righteous-Regular.ttf
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -48,10 +57,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
-
+  assets:
+    - assets/logo.png
+    - jex.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
