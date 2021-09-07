@@ -10,8 +10,9 @@ class HomePage extends StatelessWidget {
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/jex.jpg"), fit: BoxFit.cover)),
+          image: DecorationImage(
+              image: AssetImage("assets/jex.jpg"), fit: BoxFit.cover),
+        ),
         child: ListView(
           scrollDirection: Axis.vertical,
           children: <Widget>[
