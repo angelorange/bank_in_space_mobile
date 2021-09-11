@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bank_in_space/modules/home/presentation/pages/home_page.dart';
+import 'package:bank_in_space/modules/home/presentation/pages/personal_home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: PersonalHomePage(key: null),
     );
   }
 }

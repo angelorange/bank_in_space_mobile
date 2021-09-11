@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:bank_in_space/modules/home/presentation/pages/button-text-icon.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -46,10 +45,6 @@ class HomePage extends StatelessWidget {
                       fontSize: 30),
                 ),
               ),
-            ),
-            ButtonText(
-              color: Colors.purple,
-              text: "Login",
             ),
             SizedBox(
               height: 30,
