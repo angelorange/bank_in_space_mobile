@@ -1,3 +1,6 @@
+import 'package:bank_in_space/modules/home/presentation/pages/personal_home_page.dart';
+import 'package:bank_in_space/modules/home/presentation/pages/wallet.dart';
+import 'package:bank_in_space/modules/home/presentation/widgets/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:bank_in_space/modules/home/presentation/pages/home_page.dart';
 
@@ -13,9 +16,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'DevinSpace',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
+        accentColor: Colors.white,
+        canvasColor: Colors.transparent,
       ),
-      home: HomePage(),
+      home: PersonalHomePage(),
     );
   }
 }
