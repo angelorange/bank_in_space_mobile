@@ -1,3 +1,4 @@
+import 'package:bank_in_space/modules/login/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:bank_in_space/modules/home/presentation/pages/button-text-icon.dart';
 
@@ -48,9 +49,24 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            ButtonText(
-              color: Colors.purple,
-              text: "Login",
+            Center(
+              child: ElevatedButton(
+                child: Text(
+                  'Login',
+                  style: TextStyle(fontFamily: 'Righteous', fontSize: 25),
+                ),
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.purple,
+                    onPrimary: Colors.white,
+                    fixedSize: Size(250, 70),
+                    elevation: 5),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return LoginPage();
+                  }));
+                },
+              ),
             ),
             SizedBox(
               height: 30,
