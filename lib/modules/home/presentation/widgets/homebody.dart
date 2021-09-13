@@ -24,7 +24,7 @@ class HomeBody extends StatelessWidget {
               "Hello Jev",
               style: CHeadingStyle,
             ),
-            HomeTiles(option: 'Balance: \$200')
+            HomeTiles(option: 'Oc: \$200')
           ],
         ),
       ),
