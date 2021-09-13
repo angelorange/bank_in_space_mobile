@@ -1,5 +1,7 @@
+import 'package:bank_in_space/modules/home/presentation/pages/homewithsidebar.dart';
 import 'package:bank_in_space/modules/home/presentation/pages/personal_home_page.dart';
 import 'package:bank_in_space/modules/home/presentation/pages/wallet.dart';
+import 'package:bank_in_space/modules/home/presentation/widgets/homebody.dart';
 import 'package:bank_in_space/modules/home/presentation/widgets/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:bank_in_space/modules/home/presentation/pages/home_page.dart';
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
         canvasColor: Colors.transparent,
       ),
       home: PersonalHomePage(),
+      routes: {'/personalpage': (context) => HomeWithSidebar()},
     );
   }
 }

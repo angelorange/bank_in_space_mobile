@@ -59,6 +59,9 @@ flutter:
   assets:
     - assets/logo.png
     - jex.jpg
+    - assets/images/menu.png
+    - assets/images/receiveMoney.png
+    - assets/images/sendMoney.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
