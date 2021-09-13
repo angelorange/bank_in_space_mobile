@@ -1,3 +1,4 @@
+import 'package:bank_in_space/modules/register/register.dart';
 import 'package:flutter/material.dart';
 import 'package:bank_in_space/modules/home/presentation/pages/home_page.dart';
 
@@ -99,15 +100,21 @@ class _LoginPageState extends State<LoginPage> {
                               width: 1.0),
                           color: Colors.transparent,
                           borderRadius: BorderRadius.circular(20.0)),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Center(
-                          child: Text('Go Back',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Righteous')),
+                      child: Container(
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()),
+                            );
+                          },
+                          child: Center(
+                            child: Text('Go Back',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Righteous')),
+                          ),
                         ),
                       ),
                     ),
@@ -125,14 +132,22 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               SizedBox(width: 5.0),
-              InkWell(
-                child: Text(
-                  'Register here',
-                  style: TextStyle(
-                      color: Colors.green,
-                      fontFamily: 'Righteous',
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline),
+              Container(
+                child: ElevatedButton(
+                  child: Text(
+                    'Register here',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Righteous',
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RegisterPage()),
+                    );
+                  },
                 ),
               )
             ],
