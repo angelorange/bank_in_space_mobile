@@ -78,6 +78,14 @@ class HomeBody extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 22, fontWeight: FontWeight.w400),
                       ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        'Current Balance',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w400),
+                      )
                     ],
                   ),
                   Container(
@@ -129,7 +137,7 @@ class HomeBody extends StatelessWidget {
                         shape: BoxShape.circle, color: Colors.purple),
                     child: Icon(
                       Icons.add,
-                      size: 40,
+                      size: 30,
                     ),
                   ),
                   avatarWidget("avatar1", "Mike"),
