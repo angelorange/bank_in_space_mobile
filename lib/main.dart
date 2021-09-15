@@ -1,3 +1,5 @@
+import 'package:bank_in_space/modules/register/register.dart';
+import 'package:bank_in_space/modules/login/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:bank_in_space/modules/home/presentation/pages/home_page.dart';
 
@@ -12,28 +14,13 @@ class MyApp extends StatelessWidget {
       title: 'Image Loader',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Poppins',
-        primaryColor: Colors.white,
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-          elevation: 0,
-          foregroundColor: Colors.white,
-        ),
-        accentColor: Colors.redAccent,
-        textTheme: TextTheme(
-          headline1: TextStyle(fontSize: 22.0, color: Colors.redAccent),
-          headline2: TextStyle(
-            fontSize: 24.0,
-            fontWeight: FontWeight.w700,
-            color: Colors.redAccent,
-          ),
-          bodyText1: TextStyle(
-            fontSize: 14.0,
-            fontWeight: FontWeight.w400,
-            color: Colors.blueAccent,
-          ),
-        ),
+        primarySwatch: Colors.blue,
       ),
       home: HomePage(),
+      routes: {
+        '': (BuildContext context) => HomePage(),
+        '/login': (BuildContext context) => LoginPage(),
+      },
     );
   }
 }
