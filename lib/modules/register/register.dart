@@ -14,10 +14,6 @@ class _RegisterPageState extends State<RegisterPage> {
   String email = '';
   String password = '';
 
-  late final FocusNode focusEmail;
-  late final FocusNode focusPassword;
-  late final FocusNode focusPasswordConfirmation;
-  late final FocusNode focusCode;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -91,17 +87,14 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                       ),
                       validator: (value) {
-                        final pattern =
-                            r'(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)';
-                        final regExp = RegExp(pattern);
-
-                        if (value!.isNotEmpty) {
-                          return 'Enter an email';
-                        } else if (!regExp.hasMatch(value!)) {
-                          return 'Enter a valid email';
-                        } else {
-                          return null;
+                        if (value!.isEmpty) {
+                          return "Please enter email";
                         }
+                        if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]")
+                            .hasMatch(value)) {
+                          return 'Please enter a valid email';
+                        }
+                        return null;
                       },
                       keyboardType: TextInputType.emailAddress,
                       onSaved: (value) => setState(() => email = value!),
