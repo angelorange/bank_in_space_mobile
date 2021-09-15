@@ -11,8 +11,9 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        resizeToAvoidBottomInset: false,
-        body: ListView(children: <Widget>[
+      resizeToAvoidBottomInset: false,
+      body: ListView(
+        children: <Widget>[
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -152,6 +153,8 @@ class _LoginPageState extends State<LoginPage> {
               )
             ],
           )
-        ]));
+        ],
+      ),
+    );
   }
 }
