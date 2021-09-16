@@ -14,6 +14,8 @@ class _RegisterPageState extends State<RegisterPage> {
   String email = '';
   String password = '';
 
+  String _confirmPassword = '';
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -139,6 +141,26 @@ class _RegisterPageState extends State<RegisterPage> {
                       },
                       onSaved: (value) => setState(() => password = value!),
                       keyboardType: TextInputType.visiblePassword,
+                      obscureText: true,
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    TextFormField(
+                      validator: (value) =>
+                          value!.isEmpty ? 'Your password is required' : null,
+                      onSaved: (value) => _confirmPassword = value!,
+                      decoration: InputDecoration(
+                        labelText: 'Confirm Password',
+                        labelStyle: TextStyle(
+                            fontFamily: 'Righteous',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.green),
+                        ),
+                      ),
+                      autofocus: false,
                       obscureText: true,
                     ),
                     SizedBox(height: 10.0),
