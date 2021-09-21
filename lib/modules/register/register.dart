@@ -14,8 +14,6 @@ class _RegisterPageState extends State<RegisterPage> {
   String email = '';
   String password = '';
 
-  String _confirmPassword = '';
-
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -147,9 +145,15 @@ class _RegisterPageState extends State<RegisterPage> {
                       height: 20.0,
                     ),
                     TextFormField(
-                      validator: (value) =>
-                          value!.isEmpty ? 'Your password is required' : null,
-                      onSaved: (value) => _confirmPassword = value!,
+                      validator: (value) {
+                        if (value!.length < 6) {
+                          return 'Password must be at least 6 characters long';
+                        } else {
+                          return null;
+                        }
+                      },
+                      onSaved: (value) => setState(() => password = value!),
+                      keyboardType: TextInputType.visiblePassword,
                       decoration: InputDecoration(
                         labelText: 'Confirm Password',
                         labelStyle: TextStyle(
