@@ -1,14 +1,15 @@
-import 'package:get/get.dart';
+import 'package:bank_in_space/modules/home/presentation/pages/home_page.dart';
+import 'package:bank_in_space/modules/login/presentation/pages/login_page.dart';
+import 'package:bank_in_space/modules/register/register.dart';
+import 'package:get/route_manager.dart';
 import 'package:bank_in_space/app/routes/routes.dart';
 
 class Pages {
   static const INITIAL = Routes.INITIAL;
 
   static final routes = [
-    // GetPage(
-    //   name: Routes.INITIAL,
-    //   binding: null, //InitialBinding,
-    //   page: () => null, //InitialView(),
-    // ),
+    GetPage(name: Routes.HOME, page: () => HomePage()),
+    GetPage(name: Routes.LOGIN, page: () => LoginPage()),
+    GetPage(name: Routes.REGISTER, page: () => RegisterPage())
   ];
 }
