@@ -1,4 +1,4 @@
-import 'package:bank_in_space/modules/login/presentation/pages/login_page.dart';
+import 'package:bank_in_space/app/modules/login/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {

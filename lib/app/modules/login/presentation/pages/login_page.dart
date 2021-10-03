@@ -1,6 +1,6 @@
-import 'package:bank_in_space/modules/register/register.dart';
+import 'package:bank_in_space/app/modules/register/register.dart';
 import 'package:flutter/material.dart';
-import 'package:bank_in_space/modules/home/presentation/pages/home_page.dart';
+import 'package:bank_in_space/app/modules/home/presentation/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
