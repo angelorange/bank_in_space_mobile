@@ -1,6 +1,4 @@
-import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:meta/meta.dart';
 
 //nossa url base
 const baseUrl = 'https://jsonplaceholder.typicode.com/posts/';

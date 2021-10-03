@@ -1,11 +1,8 @@
-import 'package:bank_in_space/app/routes/routes.dart';
-import 'package:bank_in_space/modules/register/register.dart';
-import 'package:bank_in_space/modules/login/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:bank_in_space/app/routes/pages.dart';
 import 'package:bank_in_space/app/routes/routes.dart';
-import 'package:bank_in_space/modules/home/presentation/pages/home_page.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -21,12 +18,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      initialRoute: Routes.HOME,
       getPages: Pages.routes,
       // routes: {
       //   '/': (BuildContext context) => HomePage(),
       //   '/login': (BuildContext context) => LoginPage(),
       // },
-      initialRoute: Routes.INITIAL,
       // getPages: Pages.routes,
     );
   }
