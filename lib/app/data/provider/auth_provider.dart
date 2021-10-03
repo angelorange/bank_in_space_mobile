@@ -7,7 +7,7 @@ const baseUrl = 'https://jsonplaceholder.typicode.com/posts/';
 class AuthApiClient {
 //seu client http, pode ser http, http.Client, dio, apenas traga seus métodos para cá e funcionarão normalmente :D
   final http.Client httpClient = http.Client();
-  
+
 //   Future<Map<String, dynamic>> login(String email, String password) async {
 
 //     try{
