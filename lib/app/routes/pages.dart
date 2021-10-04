@@ -1,7 +1,7 @@
 import 'package:bank_in_space/app/data/data.dart';
 import 'package:bank_in_space/app/modules/home/presentation/pages/home_page.dart';
 import 'package:bank_in_space/app/modules/login/presentation/pages/login_page.dart';
-import 'package:bank_in_space/app/modules/register/register.dart';
+import 'package:bank_in_space/app/modules/register/register_page.dart';
 import 'package:get/route_manager.dart';
 import 'package:bank_in_space/app/routes/routes.dart';
 

@@ -1,4 +1,4 @@
-import 'package:bank_in_space/app/modules/register/register.dart';
+import 'package:bank_in_space/app/modules/register/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:bank_in_space/app/modules/home/presentation/pages/home_page.dart';
 
