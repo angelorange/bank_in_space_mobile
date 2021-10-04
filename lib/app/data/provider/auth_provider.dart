@@ -1,21 +1,14 @@
-import 'package:http/http.dart' as http;
+import 'package:get/get.dart';
 
-//nossa url base
-const baseUrl = 'https://jsonplaceholder.typicode.com/posts/';
+class Provider extends GetConnect{
 
-//nossa classe responsável por encapsular os métodos http
-class AuthApiClient {
-//seu client http, pode ser http, http.Client, dio, apenas traga seus métodos para cá e funcionarão normalmente :D
-  final http.Client httpClient = http.Client();
-
-//   Future<Map<String, dynamic>> login(String email, String password) async {
-
-//     try{
-
-//       var response = await http.post(baseUrl + "/login");
-//     }
-//   }
-
-//   //um exemplo rápido, aqui estamos recuperando todos os posts disponibilizados pela api(100)
+  Future<dynamic> getUser() async{
+    final response = await get('http://www.json-generator.com/api/json/get/cfrJFXLTAO?indent=2');
+    if(response.status.hasError){
+      return Future.error(response.statusText!);
+    } else {
+      return response.body;
+    }
+  }
 
 }

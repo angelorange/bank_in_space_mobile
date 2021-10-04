@@ -1,4 +1,5 @@
 import 'package:bank_in_space/app/modules/login/presentation/pages/login_page.dart';
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -60,10 +61,7 @@ class HomePage extends StatelessWidget {
                     fixedSize: Size(250, 70),
                     elevation: 5),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return LoginPage();
-                  }));
+                  Get.toNamed("/login");
                 },
               ),
             ),

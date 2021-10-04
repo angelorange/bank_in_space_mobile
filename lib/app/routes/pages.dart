@@ -1,3 +1,4 @@
+import 'package:bank_in_space/app/data/data.dart';
 import 'package:bank_in_space/app/modules/home/presentation/pages/home_page.dart';
 import 'package:bank_in_space/app/modules/login/presentation/pages/login_page.dart';
 import 'package:bank_in_space/app/modules/register/register.dart';
@@ -10,6 +11,7 @@ class Pages {
   static final routes = [
     GetPage(name: Routes.HOME, page: () => HomePage()),
     GetPage(name: Routes.LOGIN, page: () => LoginPage()),
-    GetPage(name: Routes.REGISTER, page: () => RegisterPage())
+    GetPage(name: Routes.REGISTER, page: () => RegisterPage()),
+    GetPage(name: Routes.DATA, page: () => Data())
   ];
 }
