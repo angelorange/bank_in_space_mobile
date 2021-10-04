@@ -1,37 +1,45 @@
+// To parse this JSON data, do
+//
+//     final user = userFromJson(jsonString);
+
 import 'dart:convert';
 
-List<UserModel> userFromJson(String str) =>
-    List<UserModel>.from(json.decode(str).map((x) => UserModel.fromJson(x)));
+List<User> userFromJson(String str) => List<User>.from(json.decode(str).map((x) => User.fromJson(x)));
 
-String userToJson(List<UserModel> data) =>
-    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String userToJson(List<User> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-class UserModel {
-  UserModel({
-    required this.email,
-    required this.username,
-    required this.password,
-    required this.id,
-  });
+class User {
+    User({
+        required this.email,
+        required this.username,
+        required this.password,
+        required this.cpf,
+        required this.birthday,
+        required this.id,
+    });
 
-  String email;
-  String username;
-  String password;
-  String id;
+    String email;
+    String username;
+    String password;
+    int cpf;
+    String birthday;
+    String id;
 
-  factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
+    factory User.fromJson(Map<String, dynamic> json) => User(
         email: json["email"],
         username: json["username"],
         password: json["password"],
+        cpf: json["cpf"],
+        birthday: json["birthday"],
         id: json["id"],
-      );
+    );
 
-  Map<String, dynamic> toJson() => {
+    Map<String, dynamic> toJson() => {
         "email": email,
         "username": username,
         "password": password,
+        "cpf": cpf,
+        "birthday": birthday,
         "id": id,
-      };
-
-  static fromMap(resp) {}
+    };
 }

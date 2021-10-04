@@ -16,20 +16,19 @@ class Data extends GetView<DataController> {
               children: [
                 CircleAvatar(
                   radius: 80,
-                  backgroundImage: NetworkImage(data['picture']),
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
-                Text(data['name']),
+                Text('username${data}'),
                 SizedBox(
                   height: 10.0,
                 ),
-                Text(data['email']),
+                Text('email${data}'),
                 SizedBox(
                   height: 10.0,
                 ),
-                Text(data['company']),
+                Text('cpf${data}'),
               ],
             ),
           )),
