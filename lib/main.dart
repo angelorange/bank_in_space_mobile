@@ -5,7 +5,7 @@ import 'package:bank_in_space/app/routes/pages.dart';
 import 'package:bank_in_space/app/routes/routes.dart';
 
 void main() {
-   DataBinding().dependencies();
+  DataBinding().dependencies();
   runApp(MyApp());
 }
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: Routes.DATA,
+      initialRoute: Routes.HOME,
       getPages: Pages.routes,
       // routes: {
       //   '/': (BuildContext context) => HomePage(),

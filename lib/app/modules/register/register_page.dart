@@ -7,6 +7,8 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -43,48 +45,98 @@ class _RegisterPageState extends State<RegisterPage> {
               padding: EdgeInsets.only(top: 40.0, left: 20.0, right: 30.0),
               child: Column(
                 children: <Widget>[
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
-                        labelText: 'Username',
-                        labelStyle: TextStyle(
-                            fontFamily: 'Righteous',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
+                      labelText: 'Username',
+                      labelStyle: TextStyle(
+                          fontFamily: 'Righteous',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                      ),
+                    ),
+                    validator: (value) {
+                      if (value!.isEmpty ||
+                          !RegExp(r'^[a-z A-Z]+$').hasMatch(value)) {
+                        return "Enter correct email";
+                      } else {
+                        return null;
+                      }
+                    },
                   ),
                   SizedBox(height: 10.0),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
-                        labelText: 'Email ',
-                        labelStyle: TextStyle(
-                            fontFamily: 'Righteous',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
+                      labelText: 'Email ',
+                      labelStyle: TextStyle(
+                          fontFamily: 'Righteous',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                      ),
+                    ),
+                    validator: (value) {
+                      if (value!.isEmpty ||
+                          !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                              .hasMatch(value)) {
+                        return "Enter correct email";
+                      } else {
+                        return null;
+                      }
+                    },
                     obscureText: true,
                   ),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
-                        labelText: 'Cpf ',
-                        labelStyle: TextStyle(
-                            fontFamily: 'Righteous',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
+                      labelText: 'Cpf ',
+                      labelStyle: TextStyle(
+                          fontFamily: 'Righteous',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                      ),
+                    ),
+                    // validator: (value) {
+                    //   if (value!.isEmpty || !RegExp())
+                    // },
                     obscureText: true,
                   ),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
-                        labelText: 'Password ',
-                        labelStyle: TextStyle(
-                            fontFamily: 'Righteous',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
+                      labelText: 'Password ',
+                      labelStyle: TextStyle(
+                          fontFamily: 'Righteous',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                      ),
+                    ),
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'Please enter a password';
+                      }
+                      return null;
+                    },
+                    obscureText: true,
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'Confirm Password ',
+                      labelStyle: TextStyle(
+                          fontFamily: 'Righteous',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                      ),
+                    ),
+                    validator: (value) {
+
+                    },
                     obscureText: true,
                   ),
                   SizedBox(height: 10.0),
@@ -96,11 +148,16 @@ class _RegisterPageState extends State<RegisterPage> {
                         shadowColor: Colors.greenAccent,
                         color: Colors.green,
                         elevation: 7.0,
-                        child: GestureDetector(
-                          onTap: () {},
+                        child: ElevatedButton(
+                          onPressed: () {
+                            if (_formKey.currentState!.validate())
+                            {
+                              print('succesfull');
+                            }
+                          },
                           child: Center(
                             child: Text(
-                              'Register',
+                              'Submit',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,

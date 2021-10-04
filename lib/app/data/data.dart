@@ -10,8 +10,7 @@ class Data extends GetView<DataController> {
       appBar: AppBar(
         title: Text('GetX Network Call test'),
       ),
-      body: controller.obx(
-          (data) => Center(
+      body: controller.obx((data) => Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -19,17 +18,21 @@ class Data extends GetView<DataController> {
                   radius: 80,
                   backgroundImage: NetworkImage(data['picture']),
                 ),
-                SizedBox(height: 20.0,),
+                SizedBox(
+                  height: 20.0,
+                ),
                 Text(data['name']),
-                SizedBox(height: 10.0,),
+                SizedBox(
+                  height: 10.0,
+                ),
                 Text(data['email']),
-                SizedBox(height: 10.0,),
+                SizedBox(
+                  height: 10.0,
+                ),
                 Text(data['company']),
-
               ],
             ),
-          )
-      ),
+          )),
     );
   }
 }
